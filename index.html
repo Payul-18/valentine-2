@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALENTINE - Retro Quest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="heartCanvas"></canvas>
+
+    <div id="splash-screen">
+        <div class="pixel-content">
+            <div class="title-main">💖 START GAME 💖</div>
+            <p class="blink">Presiona cualquier tecla para comenzar</p>
+        </div>
+    </div>
+
+    <div id="main-ui" class="hidden">
+        <div class="container dark-glass">
+            <div id="question-screen">
+                <h1 class="pixel-text-white">¿QUIERES SER MI VALENTINE?</h1>
+                <p id="names-display" class="pixel-text-small"></p>
+                <div class="button-group">
+                    <button id="btn-yes">SÍ</button>
+                    <button id="btn-no">NO</button>
+                </div>
+            </div>
+
+            <div id="success-screen" class="hidden">
+                <div class="photo-container">
+                    <img src="victoria.jpg" alt="Victoria" class="pixel-border-img">
+                </div>
+                <h2 class="pixel-text-white">¡Gracias mi yoyon por aceptar!</h2>
+                <p class="love-message">
+                    Gracias por escogerme por San Valentín, pasar cada momento a tu lado es maravilloso, tenerte como mejor amiga y enamorada es tenerlo todo en la vida, te amo con todo mi corazón Yoyo ❤️
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { margin: 0; overflow: hidden; background: #0b0e1a; font-family: 'Press Start 2P', cursive; height: 100vh; }
+
+#heartCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+
+#splash-screen { position: fixed; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; z-index: 1000; background: transparent; transition: opacity 0.6s ease; }
+.title-main { font-size: 1.5rem; color: #ff4d6d; text-shadow: 4px 4px 0px #000; }
+.blink { font-size: 0.6rem; color: #fff; animation: blinker 1.2s linear infinite; margin-top: 20px; text-align: center; }
+@keyframes blinker { 50% { opacity: 0; } }
+
+#main-ui { position: relative; z-index: 10; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; }
+.dark-glass { background: rgba(0, 0, 0, 0.8); border: 4px solid #ff4d6d; padding: 30px 20px; text-align: center; width: 95%; max-width: 550px; border-radius: 10px; }
+
+/* Grupo de botones con separación armónica */
+.button-group { display: flex; justify-content: center; gap: 60px; margin-top: 30px; width: 100%; }
+button { padding: 15px 25px; font-family: 'Press Start 2P'; font-size: 0.8rem; border: 4px solid #000; cursor: pointer; min-width: 120px; }
+
+#btn-yes { background: #2ecc71; color: white; box-shadow: 4px 4px 0px #27ae60; }
+#btn-no { background: #e74c3c; color: white; box-shadow: 4px 4px 0px #c0392b; position: relative; }
+
+/* Estilos mensaje final */
+.photo-container { margin-bottom: 20px; }
+.pixel-border-img { width: 220px; height: 220px; object-fit: cover; border: 4px solid #fff; outline: 4px solid #ff4d6d; border-radius: 5px; }
+.love-message { font-size: 0.5rem; line-height: 1.8; color: #fff; margin-top: 15px; text-align: center; padding: 0 10px; }
+
+.cursor-emoji { position: fixed; pointer-events: none; font-size: 24px; z-index: 9999; animation: fadeUp 1s forwards; }
+@keyframes fadeUp { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-50px); } }
+
+.hidden { display: none !important; }
+.pixel-text-white { color: #fff; font-size: 0.9rem; margin-bottom: 10px; }
+.pixel-text-small { font-size: 0.45rem; color: #ffb3c1; margin-top: 15px; }
+
+@media (max-width: 480px) {
+    .button-group { gap: 20px; flex-direction: column; align-items: center; }
+}
